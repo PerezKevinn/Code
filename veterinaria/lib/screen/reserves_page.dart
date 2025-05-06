@@ -54,9 +54,13 @@ class _ReservesPageState extends State<ReservesPage> {
           // *** Boton de Cancelar
           Positioned(
             right: size.width * 0.03,
-            top: size.height * 0.07,
+            top: size.height * 0.063,
             child: FilledButton(
               style: FilledButton.styleFrom(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 40,
+                  vertical: 15,
+                ),
                 backgroundColor: const Color(0xFFD08D79),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
@@ -73,6 +77,7 @@ class _ReservesPageState extends State<ReservesPage> {
               ),
             ),
           ),
+          // *** Botones de fecha
           Positioned(
             left: size.width * 0.05,
             top: size.height * 0.15,
@@ -143,6 +148,197 @@ class _ReservesPageState extends State<ReservesPage> {
                     ),
                   );
                 },
+              ),
+            ),
+          ),
+          // *** Texto de seleccionar hora
+          Positioned(
+            left: size.width * 0.05,
+            top: size.height * 0.3,
+            child: Text.rich(
+              TextSpan(
+                text: 'Select Time',
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+          ),
+          // *** Boton de Consulta General
+          Positioned(
+            left: size.width * 0.05,
+            top: size.height * 0.5,
+            right: size.width * 0.05,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                overlayColor: const Color(0xFFD08D78),
+                padding: const EdgeInsets.fromLTRB(80, 20, 0, 20),
+                alignment: Alignment.centerLeft,
+                elevation: 10,
+                backgroundColor: const Color(0xFFFFFFFF),
+                shape: RoundedRectangleBorder(
+                  side: const BorderSide(color: Colors.black, width: 1.5),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              onPressed: () {},
+              child: Text.rich(
+                TextSpan(
+                  text: 'General Consultation',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            left: size.width * 0.08,
+            top: size.height * 0.51,
+            child: Image.asset(
+              'assets/icons/General_Consultation - 64px.png',
+              scale: 1.4,
+            ),
+          ),
+
+          // *** Boton de Vacunas
+          Positioned(
+            left: size.width * 0.05,
+            top: size.height * 0.58,
+            right: size.width * 0.05,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                overlayColor: const Color(0xFFD08D78),
+                padding: const EdgeInsets.fromLTRB(80, 20, 0, 20),
+                alignment: Alignment.centerLeft,
+                elevation: 10,
+                backgroundColor: const Color(0xFFFFFFFF),
+                shape: RoundedRectangleBorder(
+                  side: const BorderSide(color: Colors.black, width: 1.5),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              onPressed: () {},
+              child: Text.rich(
+                TextSpan(
+                  text: 'Vaccines',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // *** Icono de Vacunas
+          Positioned(
+            left: size.width * 0.08,
+            top: size.height * 0.59,
+            child: Image.asset('assets/icons/Vaccines - 64px.png', scale: 1.4),
+          ),
+          // *** Boton de Rehabilitacion
+          Positioned(
+            left: size.width * 0.05,
+            top: size.height * 0.66,
+            right: size.width * 0.05,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                overlayColor: const Color(0xFFD08D78),
+                padding: const EdgeInsets.fromLTRB(80, 20, 0, 20),
+                alignment: Alignment.centerLeft,
+                elevation: 10,
+                backgroundColor: const Color(0xFFFFFFFF),
+                shape: RoundedRectangleBorder(
+                  side: const BorderSide(color: Colors.black, width: 1.5),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              onPressed: () {},
+              child: Text.rich(
+                TextSpan(
+                  text: 'Rehabilitation',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // *** Icono de Rehabilitacion
+          Positioned(
+            left: size.width * 0.08,
+            top: size.height * 0.67,
+            child: Image.asset(
+              'assets/icons/Rehabilitation - 64px.png',
+              scale: 1.4,
+            ),
+          ),
+          // *** Boton de Cirugia
+          Positioned(
+            left: size.width * 0.05,
+            top: size.height * 0.74,
+            right: size.width * 0.05,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                overlayColor: const Color(0xFFD08D78),
+                padding: const EdgeInsets.fromLTRB(80, 20, 0, 20),
+                alignment: Alignment.centerLeft,
+                elevation: 10,
+                backgroundColor: const Color(0xFFFFFFFF),
+                shape: RoundedRectangleBorder(
+                  side: const BorderSide(color: Colors.black, width: 1.5),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              onPressed: () {},
+              child: Text.rich(
+                TextSpan(
+                  text: 'Surgery',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // *** Icono de Cirugia
+          Positioned(
+            left: size.width * 0.08,
+            top: size.height * 0.75,
+            child: Image.asset('assets/icons/Surgery - 64px.png', scale: 1.4),
+          ),
+          // *** Boton de Done
+          Positioned(
+            left: size.width * 0.35,
+            top: size.height * 0.85,
+            child: FilledButton(
+              style: FilledButton.styleFrom(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 40,
+                  vertical: 15,
+                ),
+                backgroundColor: const Color(0xFFD08D79),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              onPressed: () {},
+              child: Text(
+                'Done',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
