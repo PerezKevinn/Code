@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
   static const String routeName = 'LoginScreen';
-  const LoginScreen({super.key});
+  LoginScreen({super.key});
+
+  final username = TextEditingController();
+  final password = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+
+      
       backgroundColor: const Color(0xFFD08D79),
       body: Stack(
         children: [
@@ -48,6 +53,7 @@ class LoginScreen extends StatelessWidget {
             top: size.height * 0.6,
             right: size.width * 0.1,
             child: TextField(
+              controller: username,
               decoration: InputDecoration(
                 border: UnderlineInputBorder(),
                 labelText: 'Username',
@@ -59,6 +65,7 @@ class LoginScreen extends StatelessWidget {
             top: size.height * 0.68,
             right: size.width * 0.1,
             child: TextField(
+              controller: password,
               obscureText: true,
               decoration: InputDecoration(
                 border: UnderlineInputBorder(),
@@ -72,13 +79,14 @@ class LoginScreen extends StatelessWidget {
             right: size.width * 0.28,
             child: FilledButton(
               onPressed: () {},
+
               style: FilledButton.styleFrom(
                 backgroundColor: Color(0xFFD08D78),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              child: const Text('Sing In'),
+              child: const Text('Sign In'),
             ),
           ),
           Positioned(

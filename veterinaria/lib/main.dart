@@ -4,7 +4,9 @@ import 'package:veterinaria/screen/login_screen.dart';
 import 'package:veterinaria/screen/register_screen.dart';
 import 'package:veterinaria/screen/reserves_page.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+   
   runApp(const MyApp());
 }
 
@@ -17,12 +19,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Veterinary Clinic',
-      initialRoute: ReservesPage.routeName,
+      initialRoute: LoginScreen.routeName,
       routes: {
-        LoginScreen.routeName: (context) => const LoginScreen(),
-        RegisterScreen.routeName: (context) => const RegisterScreen(),
-        HomePage.routeName: (context) => const HomePage(),
-        ReservesPage.routeName: (context) => const ReservesPage(),
+        LoginScreen.routeName: (context) => LoginScreen(),
+        RegisterScreen.routeName: (context) => RegisterScreen(),
+        HomePage.routeName: (context) => HomePage(),
+        ReservesPage.routeName: (context) => ReservesPage(),
       },
     );
   }

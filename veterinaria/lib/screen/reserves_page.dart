@@ -21,7 +21,6 @@ class _ReservesPageState extends State<ReservesPage> {
   }
 
   List<DateTime> generateDatesOfMonth(int year, int month) {
-    final firstDay = DateTime(year, month, 1);
     final lastDay = DateTime(year, month + 1, 0);
     return List.generate(
       lastDay.day,
@@ -171,75 +170,51 @@ class _ReservesPageState extends State<ReservesPage> {
             left: size.width * 0.05,
             top: size.height * 0.5,
             right: size.width * 0.05,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                overlayColor: const Color(0xFFD08D78),
-                padding: const EdgeInsets.fromLTRB(80, 20, 0, 20),
-                alignment: Alignment.centerLeft,
-                elevation: 10,
-                backgroundColor: const Color(0xFFFFFFFF),
-                shape: RoundedRectangleBorder(
-                  side: const BorderSide(color: Colors.black, width: 1.5),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
+            child: FloatingActionButton.extended(
+              splashColor: const Color(0xFFD08D78),
+              backgroundColor: const Color(0xFFFFFFFF),
               onPressed: () {},
-              child: Text.rich(
-                TextSpan(
-                  text: 'General Consultation',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
+              label: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    'assets/icons/General_Consultation - 64px.png',
+                    scale: 1.5,
                   ),
-                ),
+                  const SizedBox(
+                    width: 10,
+                  ), // Espaciado entre el icono y el texto
+                  const Text(
+                    'General Consultation',
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  ),
+                ],
               ),
             ),
           ),
-          Positioned(
-            left: size.width * 0.08,
-            top: size.height * 0.51,
-            child: Image.asset(
-              'assets/icons/General_Consultation - 64px.png',
-              scale: 1.4,
-            ),
-          ),
-
           // *** Boton de Vacunas
           Positioned(
             left: size.width * 0.05,
             top: size.height * 0.58,
             right: size.width * 0.05,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                overlayColor: const Color(0xFFD08D78),
-                padding: const EdgeInsets.fromLTRB(80, 20, 0, 20),
-                alignment: Alignment.centerLeft,
-                elevation: 10,
-                backgroundColor: const Color(0xFFFFFFFF),
-                shape: RoundedRectangleBorder(
-                  side: const BorderSide(color: Colors.black, width: 1.5),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
+            child: FloatingActionButton.extended(
+              splashColor: const Color(0xFFD08D78),
+              backgroundColor: const Color(0xFFFFFFFF),
               onPressed: () {},
-              child: Text.rich(
-                TextSpan(
-                  text: 'Vaccines',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
+              label: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Image.asset('assets/icons/Vaccines - 64px.png', scale: 1.5),
+                  const SizedBox(
+                    width: 10,
+                  ), // Espaciado entre el icono y el texto
+                  const Text(
+                    'Vaccines',
+                    style: TextStyle(fontSize: 20, color: Colors.black),
                   ),
-                ),
+                ],
               ),
             ),
-          ),
-          // *** Icono de Vacunas
-          Positioned(
-            left: size.width * 0.08,
-            top: size.height * 0.59,
-            child: Image.asset('assets/icons/Vaccines - 64px.png', scale: 1.4),
           ),
           // *** Boton de Rehabilitacion
           Positioned(
